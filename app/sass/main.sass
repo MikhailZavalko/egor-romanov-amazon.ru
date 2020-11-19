@@ -1,0 +1,797 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+
+::placeholder
+	color: #000
+
+::selection
+	background-color: $accent
+	color: #fff
+	
+
+html, body
+	height: 100%
+	margin: 0
+	padding: 0
+
+body
+	font-size: 16px
+	font-weight: 400
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $fontcolor
+	background-color: #fefefe
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: #C3C3C3
+		&:required:valid
+			border-color: #C3C3C3
+
+*
+	box-sizing: border-box
+
+.container
+	width: 1360px
+	margin: 0 auto
+	padding: 0 20px
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+section
+	padding: 135px 0 125px 0
+
+.text-right
+	display: flex
+	justify-content: flex-end
+
+.text-center
+	text-align: center
+
+
+
+h2.type-head
+	font-size: 36px
+	font-weight: 700
+	text-align: center
+	line-height: 1.2
+	margin: 0 0 60px
+	span
+		display: inline-block
+		background: $accent
+		text-transform: uppercase
+		font-size: 36px
+		font-weight: 700
+		padding: 0 10px
+		margin-top: 10px
+
+
+
+.button
+	display: inline-block
+	border-radius: 10em
+	color: #000
+	height: 60px
+	font-size: 18px
+	font-weight: 700
+	text-align: center
+	outline: none
+	margin: auto
+	position: relative
+	z-index: 1
+	display: flex
+	align-items: center
+	justify-content: center
+	text-decoration: none
+	background: $buttonbg
+	padding: 3px
+	box-sizing: border-box
+	transition: $time
+	&.button-header
+		padding: 0
+		height: 40px
+		width: 100%
+		font-size: 14px
+		&:focus, &:hover
+			background: $buttonbghover
+		span
+			line-height: 1.6
+	&:focus, &:hover
+		background: $buttonbghover
+	span
+		line-height: 1.3
+		z-index: 3
+
+
+
+.header
+	width: 100%
+	padding: 8px 0
+	// position: fixed
+	// top: 0
+	z-index: 110
+	background-color: #EBEBEC
+	transition: $time
+	&.shrinked
+		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5)
+	.main-head
+		display: grid
+		grid-template-columns: auto 500px
+		align-items: center
+		a
+			word-wrap: normal
+	.head-contacts
+		//margin-right: 150px
+.logo
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	p
+		font-size: 16px
+		line-height: 1.15
+		margin: 0 0 0 24px
+		color: #282828
+		span
+			font-size: 14px
+
+
+.contacts
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+	align-items: center
+	a
+		display: flex
+		justify-content: flex-start
+		align-items: flex-start
+		text-decoration: none
+		transition: color .25s ease
+		font-size: 16px
+		font-weight: 500
+		max-width: 220px
+		line-height: 1.3
+		img
+			margin-right: 11px
+			margin-top: 4px
+			flex-shrink: 0
+		&:hover
+			text-decoration: none
+			color: $accent
+		&.tel-link
+			font-size: 17px
+		&.link
+			color: #000
+			&:hover
+				color: $accent
+
+
+
+.top-section
+	padding: 80px 0 0 0
+	background: url('../img/top-bg.jpg') center no-repeat
+	background-size: cover
+	min-height: calc(100vh - 30%)
+	display: flex
+	align-items: center
+	box-sizing: border-box
+	color: #fff
+	&.single
+		padding: 90px 0 100px 0
+		min-height: auto
+		h1
+			font-size: 44px
+			margin: 0
+			padding: 0 50px
+		h2
+			display: none
+	.logo-sm
+		display: none
+	.container
+		display: flex
+		flex-direction: column
+		height: 100%
+	h1, h2
+		text-align: center
+		margin-top: 0
+		margin-bottom: 50px
+		line-height: 1.4
+		font-size: 40px
+		font-weight: 500
+		span
+			padding: 0 15px
+			display: inline-block
+			background-color: $green
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
+	h2
+		display: none
+		padding: 0 15px
+		background-color: $green
+		margin-bottom: 10px
+
+
+
+.content-section
+	padding: 70px 0 100px
+
+
+
+.type-block
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-row-gap: 50px
+	grid-column-gap: 50px
+	.type-item
+		color: #232323
+		text-decoration: none
+		padding: 15px
+		transition: $time
+		p
+			margin: 0 0 15px
+			font-size: 18px
+			font-weight: 700
+			line-height: 1
+			height: 36px
+			&.excerpt
+				font-weight: 400
+				font-size: 14px
+				line-height: 1.5
+				margin: 15px 0
+				height: auto
+		&:hover
+			box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.5)
+			.watch-button
+				&::after
+					background-color: #fff
+		.watch-button
+			padding: 12px 18px
+			font-size: 14px
+			font-weight: 400
+			color: #fff
+			background: $accent
+			margin: 0
+			box-sizing: border-box
+			display: inline-block
+			text-decoration: none
+			height: auto
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				bottom: 9px
+				left: 50%
+				transform: translateX(-50%)
+				transition: $time
+				width: 70%
+				height: 1px
+				background-color: transparent
+
+
+
+.single-content
+	padding: 0 250px
+	blockquote
+		margin: 30px 0
+		padding: 0 33px
+		position: relative
+		&::before, &::after
+			color: $accent
+			font-size: 60px
+			line-height: 1
+			position: absolute
+		&::before
+			content: '"'
+			left: 0
+			top: -6px
+		&::after
+			content: '"'
+			right: 0
+			bottom: -36px
+		p
+			font-weight: 300
+			font-style: italic
+			font-size: 16px
+			line-height: 1.5
+			margin: 0
+	img
+		margin: 50px auto
+	h2
+		font-size: 30px
+		font-weight: 700
+		margin: 27px 0
+	p
+		font-size: 16px
+		line-height: 2
+		margin: 25px 0 40px 0
+		strong
+			font-weight: 700
+		&.img-text
+			text-align: center
+			margin-top: -40px
+			font-weight: 500
+	a
+		color: $accent
+		font-weight: 500
+		position: relative
+		text-decoration: none
+		&:hover
+			&::after
+				background-color: $accent
+		&::after
+			content: ''
+			position: absolute
+			bottom: 1px
+			right: 0
+			width: 100%
+			height: 2px
+			background-color: transparent
+			transition: $time
+	.img-grid
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-gap: 20px
+		img
+			margin: 0
+	.video
+		position: relative
+		padding-bottom: 56.25%
+		padding-top: 25px
+		height: 0
+		max-width: 1000px
+		margin: 0 auto
+		iframe
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+	.slide-item
+		.res-imgs
+			img
+				margin: 0
+	.images
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		img
+			margin: 40px auto
+	a.back-to-blog
+		margin: 70px auto 0 auto
+		text-align: right
+		display: inline-block
+		text-decoration: none
+		display: flex
+		justify-content: flex-end
+		&:hover
+			p
+				&::after
+					background-color: $accent
+		p
+			margin: 0
+			color: $accent
+			font-weight: 500
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				bottom: 3px
+				right: 0
+				width: 100%
+				height: 2px
+				background-color: transparent
+				transition: $time
+
+
+	
+
+.form
+	padding: 47px 50px 29px 50px
+	display: flex
+	flex-direction: column
+	position: relative
+	max-width: 430px
+	background: #fff
+	border-radius: 10px
+	p
+		padding: 0
+		font-size: 22px
+		line-height: 1.2
+		margin: 0 0 38px 0
+		background: none
+		font-style: normal
+		&.personal-data
+			font-size: 11px
+			font-weight: 300
+			color: #777
+			line-height: 1.3
+			margin: 0 0 0 4px
+	.input
+		margin-bottom: 11px
+		text-align: center
+		font-size: 16px
+		font-weight: 300
+		border: 1px #C3C3C3 solid
+		height: 40px
+		width: 100%
+		box-sizing: border-box
+		font-family: gothampro-g, sans-serif
+		&::placeholder
+			color: #000
+		&:focus
+			border: 1px #C3C3C3 solid
+			&::placeholder
+				color: transparent
+	.button
+		width: 100%
+		font-size: 18px
+		height: 53px
+		margin: 0 0 8px
+		font-weight: 700
+		border: none
+		margin-top: 14px
+		&:hover
+			cursor: pointer
+	.confirm
+		display: flex
+		align-items: flex-start
+		padding: 0 0 0 16px
+	.success
+		font-weight: 900
+		background-color: #fff
+		p
+			color: #000
+			font-size: 13px
+			font-weight: 500
+			span
+				color: $accent
+				font-size: 30px
+				margin-bottom: 0
+				line-height: 1
+				text-transform: uppercase
+				span
+					color: $fontcolor
+					font-size: 18px
+					font-weight: 400
+					margin-top: 25px
+					display: block
+					line-height: 1.2
+	&::before
+		content: ''
+		box-sizing: border-box
+		z-index: 10
+		opacity: 0
+		visibility: hidden
+		transition-property: opacity, visibility
+		transition-duration: .15s
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-top: -25px
+		margin-left: -25px
+		display: block
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		border-style: solid
+		border-color: $accent rgba( 198, 198, 198, 0.5 ) rgba( 198, 198, 198, 0.5 )
+		border-width: 4px
+		animation: loading-spin .7s infinite linear
+	&::after
+		content: ''
+		background-color: rgba(255,255,255,.8)
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-radius: 10px
+		z-index: 9
+		opacity: 0
+		visibility: hidden
+	&.loading
+		&::before, &::after
+			opacity: 1
+			visibility: visible
+
+
+
+.main-footer
+	padding: 12px 0 16px 0
+	background-color: lighten($gray, 60%)
+	.footer-grid
+		display: flex
+		justify-content: space-between
+		align-items: center
+		img
+			flex-shrink: 0
+		a
+			color: #000
+			text-decoration: none
+			font-size: 14px
+			font-weight: 300
+			flex-shrink: 0
+			&.politic-button
+				display: flex
+				justify-content: center
+				align-items: center
+				text-decoration: underline
+				line-height: 1.1
+				opacity: .6
+				&:hover
+					text-decoration: none
+		.polit
+			color: #000
+			span
+				font-size: 12px
+				font-weight: 300
+				line-height: 1.1
+				opacity: .6
+		.contacts
+			justify-content: center
+			.link
+				color: #000
+				font-weight: 500
+				&:hover
+					color: $accent
+		.footer-about
+			p
+				margin: 0
+
+
+
+.d-none
+	display: none
+
+
+
+.popup-form
+	max-width: 375px
+	padding: 33px 40px 32px 40px
+	background-color: #fff
+	display: flex
+	flex-direction: column
+	position: relative
+	margin: auto
+	text-align: center
+	box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.19)
+	h4
+		color: $accent
+		font-size: 30px
+		font-weight: 700
+		line-height: 1.1
+		margin: 0 0 15px 0
+	p
+		font-size: 12px
+		line-height: 1.2
+		margin-top: 0
+		&.personal-data
+			font-size: 10px
+			color: #adadad
+			line-height: 1
+			margin-top: 12px
+			margin-bottom: 0
+		.politic-button
+			color: #adadad
+	.input
+		padding: 0 10px
+		margin-bottom: 25px
+		font-weight: 300
+		font-size: 12px
+		text-align: center
+		border: none
+		border: 1px #C3C3C3 solid
+		width: 100%
+		box-sizing: border-box
+		&::placeholder
+			color: #000
+		&:focus
+			border: 1px #C3C3C3 solid
+			&::placeholder
+				color: transparent
+	.button
+		width: 100%
+		font-size: 16px
+		height: 65px
+		margin: 0 0 8px
+		font-weight: 700
+		&:hover
+			cursor: pointer
+	h4
+		font-weight: 500
+		font-size: 32px
+		text-align: center
+		line-height: 1.3
+	p
+		font-size: 13px
+		margin: 0 0 13px
+		font-weight: 400
+		&.personal-data
+			font-size: 11px
+			color: #8b8b8b
+			line-height: 1.2
+			margin: 2px 0 12px 0
+	.input
+		padding: 0
+		text-align: center
+		margin-bottom: 9px
+		font-size: 16px
+		font-weight: 300
+		border: 1px #C3C3C3 solid
+		height: 33px
+		width: 100%
+		box-sizing: border-box
+		font-family: gothampro-g, sans-serif
+		&::placeholder
+			color: #000
+		&:focus
+			border: 1px #C3C3C3 solid
+			&::placeholder
+				color: transparent
+	.button
+		font-size: 16px
+		margin: 0
+		&.button-wline
+			span
+				position: relative
+				&::after
+					content: ''
+					position: absolute
+					left: 0
+					bottom: 2px
+					width: 100%
+					background-color: #e1a967
+					height: 1px
+					transition: $time
+			&:focus, &:hover
+				span
+					&::after
+						opacity: 0
+						visibility: hidden
+
+	.success
+		font-weight: 900
+		background-color: #fff
+		font-size: 36px
+		span
+			color: $accent
+			margin-bottom: 0
+			line-height: 1
+			text-transform: uppercase
+			span
+				color: $fontcolor
+				font-size: 18px
+				font-weight: 400
+				margin-top: 25px
+				display: block
+				line-height: 1.2
+	&::before
+		content: ''
+		box-sizing: border-box
+		z-index: 10
+		opacity: 0
+		visibility: hidden
+		transition-property: opacity, visibility
+		transition-duration: .15s
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-top: -25px
+		margin-left: -25px
+		display: block
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		border-style: solid
+		border-color: $yellow rgba( 198, 198, 198, 0.5 ) rgba( 198, 198, 198, 0.5 )
+		border-width: 4px
+		animation: loading-spin .7s infinite linear
+	&::after
+		content: ''
+		background-color: rgba(255,255,255,.8)
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 9
+		opacity: 0
+		visibility: hidden
+	&.loading
+		&::before, &::after
+			opacity: 1
+			visibility: visible
+
+.mfp-close-btn-in .mfp-close
+	color: #000
+	background-color: #fff
+	width: 25px
+	height: 25px
+	line-height: 25px
+	margin-top: 10px
+	margin-right: 10px
+	&:focus
+		outline: none
+
+.mfp-close
+	outline: none !important
+
+.politic
+	max-width: 550px
+	margin: 40px auto
+	padding: 20px 30px
+	position: relative
+	background-color: #fff
+	h4
+		font-size: 24px
+		margin-bottom: 20px
+		line-height: 1.1
+		font-weight: 900
+		margin-top: 10px
+		text-align: center
+	p
+		line-height: 1.3
+		font-weight: 300
+
+.success
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	border-radius: 10px
+	text-align: center
+	z-index: 2
+	font-weight: 300
+	background-color: #fff
+	align-items: center
+	justify-content: center
+	padding: 5px
+	box-sizing: border-box
+	display: none
+	p
+		span
+			color: $accent
+			font-size: 30px
+			margin-bottom: 0
+			line-height: 1
+			span
+				color: #fff
+				font-size: 20px
+				font-weight: 400
+				margin-top: 25px
+	&.visible
+		display: flex
+
+
+@-webkit-keyframes loading-spin
+	from
+		transform: rotateZ(0deg)
+
+	to
+		transform: rotateZ(360deg)
+
+
+@keyframes loading-spin
+	from
+		transform: rotateZ(0deg)
+
+	to
+		transform: rotateZ(360deg)
+
+.spinner
+	position: relative
+	
+
+
+@import "media" // Always at the end
