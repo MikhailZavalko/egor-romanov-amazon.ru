@@ -38,7 +38,7 @@ body
 	box-sizing: border-box
 
 .container
-	width: 1360px
+	width: 1400px
 	margin: 0 auto
 	padding: 0 20px
 
@@ -48,7 +48,7 @@ body
 	height: auto
 
 section
-	padding: 135px 0 125px 0
+	padding: 130px 0 190px 0
 
 .text-right
 	display: flex
@@ -60,29 +60,31 @@ section
 
 
 h2.type-head
-	font-size: 36px
-	font-weight: 700
-	text-align: center
-	line-height: 1.2
+	font-size: 72px
+	font-weight: 800
+	line-height: 0.8
 	margin: 0 0 60px
 	span
-		display: inline-block
-		background: $accent
-		text-transform: uppercase
-		font-size: 36px
-		font-weight: 700
-		padding: 0 10px
-		margin-top: 10px
+		color: $accent
+
+h4
+	font-size: 30px
+	font-weight: 600
+	color: #ffffff
+	background-color: $accent
+	display: inline-block
+	padding: 0 18px
+	margin: 105px 0 45px 0
 
 
 
 .button
 	display: inline-block
 	border-radius: 10em
-	color: #000
+	color: #fff
 	height: 60px
-	font-size: 18px
-	font-weight: 700
+	font-size: 14px
+	font-weight: 400
 	text-align: center
 	outline: none
 	margin: auto
@@ -92,17 +94,17 @@ h2.type-head
 	align-items: center
 	justify-content: center
 	text-decoration: none
-	background: $buttonbg
+	background: $accent
 	padding: 3px
 	box-sizing: border-box
 	transition: $time
 	&.button-header
 		padding: 0
-		height: 40px
+		height: 46px
 		width: 100%
 		font-size: 14px
 		&:focus, &:hover
-			background: $buttonbghover
+			background: $yellow
 		span
 			line-height: 1.6
 	&:focus, &:hover
@@ -115,17 +117,19 @@ h2.type-head
 
 .header
 	width: 100%
-	padding: 8px 0
-	// position: fixed
-	// top: 0
+	padding: 37px 0
+	position: fixed
+	top: 0
 	z-index: 110
-	background-color: #EBEBEC
+	background-color: transparent
 	transition: $time
 	&.shrinked
+		background-color: #fff
 		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5)
+		padding: 10px 0
 	.main-head
 		display: grid
-		grid-template-columns: auto 500px
+		grid-template-columns: auto 215px
 		align-items: center
 		a
 			word-wrap: normal
@@ -135,262 +139,192 @@ h2.type-head
 	display: flex
 	align-items: center
 	justify-content: flex-start
-	p
-		font-size: 16px
-		line-height: 1.15
-		margin: 0 0 0 24px
-		color: #282828
-		span
-			font-size: 14px
-
-
-.contacts
-	display: flex
-	flex-direction: column
-	justify-content: flex-end
-	align-items: center
-	a
-		display: flex
-		justify-content: flex-start
-		align-items: flex-start
-		text-decoration: none
-		transition: color .25s ease
-		font-size: 16px
-		font-weight: 500
-		max-width: 220px
-		line-height: 1.3
-		img
-			margin-right: 11px
-			margin-top: 4px
-			flex-shrink: 0
-		&:hover
-			text-decoration: none
-			color: $accent
-		&.tel-link
-			font-size: 17px
-		&.link
-			color: #000
-			&:hover
-				color: $accent
 
 
 
 .top-section
-	padding: 80px 0 0 0
-	background: url('../img/top-bg.jpg') center no-repeat
+	padding: 0
+	background: url('../img/top-bg.png') center no-repeat
 	background-size: cover
-	min-height: calc(100vh - 30%)
+	min-height: 100vh
 	display: flex
 	align-items: center
 	box-sizing: border-box
-	color: #fff
-	&.single
-		padding: 90px 0 100px 0
-		min-height: auto
-		h1
-			font-size: 44px
-			margin: 0
-			padding: 0 50px
-		h2
-			display: none
+	color: $fontcolor
+	position: relative
 	.logo-sm
 		display: none
 	.container
 		display: flex
 		flex-direction: column
 		height: 100%
-	h1, h2
-		text-align: center
+	h1
+		text-align: left
 		margin-top: 0
 		margin-bottom: 50px
-		line-height: 1.4
-		font-size: 40px
-		font-weight: 500
+		line-height: 0.9
+		font-size: 102px
+		font-weight: 800
 		span
-			padding: 0 15px
 			display: inline-block
-			background-color: $green
-			margin-bottom: 10px
-			&:last-child
-				margin-bottom: 0
-	h2
-		display: none
-		padding: 0 15px
-		background-color: $green
-		margin-bottom: 10px
+			color: $accent
+	h3, p
+		font-family: roboto-g, sans-serif
+		font-size: 24px
+		line-height: 1.4
+	h3
+		font-weight: 700
+		margin: 0 0 30px 0
+	p
+		margin: 0
+	.scroll-block
+		position: absolute
+		bottom: 59px
+		left: 50%
+		transform: translateX(-50%)
+		p
+			font-family: $default-font
+			font-weight: 300
+			font-style: italic
+			font-size: 12px
+			span
+				font-weight: 600
+		img
+			display: block
+			margin: 24px auto 0 auto
+		
+
+
+.info-section
+	background-color: $blue
+	color: #ffffff
+	font-family: roboto-g, sans-serif
+	.info-block
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		grid-gap: 62px
+	.info-item
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		justify-content: flex-end
+		p
+			margin: 25px 0 0
+			line-height: 1.2
+			font-weight: 300
+			font-size: 16px
 
 
 
 .content-section
-	padding: 70px 0 100px
-
-
-
-.type-block
-	display: grid
-	grid-template-columns: repeat(3, 1fr)
-	grid-row-gap: 50px
-	grid-column-gap: 50px
+	padding: 105px 0 90px
+	.type-block
+		display: flex
+		flex-direction: column
 	.type-item
-		color: #232323
-		text-decoration: none
-		padding: 15px
-		transition: $time
-		p
-			margin: 0 0 15px
-			font-size: 18px
-			font-weight: 700
-			line-height: 1
-			height: 36px
-			&.excerpt
-				font-weight: 400
-				font-size: 14px
-				line-height: 1.5
-				margin: 15px 0
-				height: auto
-		&:hover
-			box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.5)
-			.watch-button
-				&::after
-					background-color: #fff
-		.watch-button
-			padding: 12px 18px
-			font-size: 14px
-			font-weight: 400
-			color: #fff
-			background: $accent
-			margin: 0
-			box-sizing: border-box
-			display: inline-block
-			text-decoration: none
-			height: auto
-			position: relative
-			&::after
-				content: ''
-				position: absolute
-				bottom: 9px
-				left: 50%
-				transform: translateX(-50%)
-				transition: $time
-				width: 70%
-				height: 1px
-				background-color: transparent
-
-
-
-.single-content
-	padding: 0 250px
-	blockquote
-		margin: 30px 0
-		padding: 0 33px
+		display: flex 
+		justify-content: space-between
+		&:nth-child(even)
+			flex-direction: row-reverse
+			.text
+				margin: 70px 0 0 40px
+		&:not(:last-child)
+			margin-bottom: 40px
+		.text
+			display: flex
+			width: 50%
+			.num
+				font-size: 124px
+				font-weight: 900
+				color: $accent
+				line-height: 1.4
+				margin-right: 40px
+			h5
+				font-size: 24px
+				font-weight: 800
+				line-height: 1.0
+				margin: 65px 0 20px 0
+			ul
+				padding: 0
+				margin: 0
+				li
+					list-style-type: none
+					font-size: 16px
+					font-weight: 300
+	.play-video
 		position: relative
-		&::before, &::after
-			color: $accent
-			font-size: 60px
-			line-height: 1
+		.play-icon
 			position: absolute
-		&::before
-			content: '"'
-			left: 0
-			top: -6px
-		&::after
-			content: '"'
-			right: 0
-			bottom: -36px
-		p
-			font-weight: 300
-			font-style: italic
-			font-size: 16px
-			line-height: 1.5
-			margin: 0
-	img
-		margin: 50px auto
-	h2
-		font-size: 30px
-		font-weight: 700
-		margin: 27px 0
-	p
-		font-size: 16px
-		line-height: 2
-		margin: 25px 0 40px 0
-		strong
-			font-weight: 700
-		&.img-text
-			text-align: center
-			margin-top: -40px
-			font-weight: 500
-	a
-		color: $accent
-		font-weight: 500
-		position: relative
-		text-decoration: none
-		&:hover
-			&::after
-				background-color: $accent
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			z-index: 2
+		img
+			display: block
 		&::after
 			content: ''
 			position: absolute
-			bottom: 1px
-			right: 0
-			width: 100%
-			height: 2px
-			background-color: transparent
-			transition: $time
-	.img-grid
-		display: grid
-		grid-template-columns: repeat(3, 1fr)
-		grid-gap: 20px
-		img
-			margin: 0
-	.video
-		position: relative
-		padding-bottom: 56.25%
-		padding-top: 25px
-		height: 0
-		max-width: 1000px
-		margin: 0 auto
-		iframe
-			position: absolute
-			top: 0
-			left: 0
 			width: 100%
 			height: 100%
-	.slide-item
-		.res-imgs
-			img
-				margin: 0
-	.images
-		display: flex
-		justify-content: center
-		align-items: center
-		flex-direction: column
-		img
-			margin: 40px auto
-	a.back-to-blog
-		margin: 70px auto 0 auto
-		text-align: right
-		display: inline-block
-		text-decoration: none
-		display: flex
-		justify-content: flex-end
+			top: 0
+			left: 0
+			background-color: rgba($blue, .3)
+			z-index: 1
+			transition: $time
 		&:hover
-			p
-				&::after
-					background-color: $accent
-		p
-			margin: 0
-			color: $accent
-			font-weight: 500
-			position: relative
 			&::after
-				content: ''
-				position: absolute
-				bottom: 3px
-				right: 0
-				width: 100%
-				height: 2px
 				background-color: transparent
+
+
+
+.small-info-section
+	padding: 155px 0 142px 0
+	background: url('../img/small-info-bg.jpg') center no-repeat
+	background-size: cover
+	color: #fff
+	text-align: center
+	p
+		font-size: 30px
+		line-height: 1.2
+		margin: 40px 0 0
+		span
+			font-weight: 700
+
+
+
+.helpful-info-section
+	padding: 105px 0 85px 0
+	.blog-links
+		display: flex
+		align-items: flex-end
+		.icon
+			height: 78px
+			display: flex
+			justify-content: flex-start
+			align-items: center
+		a
+			font-size: 18px
+			font-weight: 600
+			color: $fontcolor
+			text-decoration: none
+			&:hover
+				p
+					color: $accent
+			p
+				margin: 30px 0 0
 				transition: $time
+			&:not(:last-child)
+				margin-right: 65px
+	.publication-links
+		display: grid
+		grid-template-columns: repeat(5, 1fr)
+		margin-right: 90px
+		grid-column-gap: 75px
+		grid-row-gap: 35px
+		a
+			display: flex
+			justify-content: flex-start
+			align-items: center
 
 
 	
@@ -507,8 +441,8 @@ h2.type-head
 
 
 .main-footer
-	padding: 12px 0 16px 0
-	background-color: lighten($gray, 60%)
+	padding: 45px 0 40px 0
+	border-top: 1px solid #d2d1d4
 	.footer-grid
 		display: flex
 		justify-content: space-between
@@ -519,7 +453,7 @@ h2.type-head
 			color: #000
 			text-decoration: none
 			font-size: 14px
-			font-weight: 300
+			font-weight: 400
 			flex-shrink: 0
 			&.politic-button
 				display: flex
@@ -527,26 +461,9 @@ h2.type-head
 				align-items: center
 				text-decoration: underline
 				line-height: 1.1
-				opacity: .6
+				opacity: .5
 				&:hover
 					text-decoration: none
-		.polit
-			color: #000
-			span
-				font-size: 12px
-				font-weight: 300
-				line-height: 1.1
-				opacity: .6
-		.contacts
-			justify-content: center
-			.link
-				color: #000
-				font-weight: 500
-				&:hover
-					color: $accent
-		.footer-about
-			p
-				margin: 0
 
 
 
