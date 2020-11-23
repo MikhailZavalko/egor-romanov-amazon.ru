@@ -133,8 +133,6 @@ h4
 		align-items: center
 		a
 			word-wrap: normal
-	.head-contacts
-		//margin-right: 150px
 .logo
 	display: flex
 	align-items: center
@@ -152,6 +150,14 @@ h4
 	box-sizing: border-box
 	color: $fontcolor
 	position: relative
+	&::before
+		content: ''
+		width: 40px
+		height: 100%
+		position: absolute
+		left: 30px
+		top: 0
+		background: url('../img/top-bg-logo.png')
 	.logo-sm
 		display: none
 	.container
@@ -192,6 +198,32 @@ h4
 		img
 			display: block
 			margin: 24px auto 0 auto
+	.main-block
+		position: absolute
+		bottom: 0
+		left: 50%
+		transform: translateX(45%)
+		.text
+			position: absolute
+			right: 0
+			top: 120px
+			text-align: center
+			span
+				font-weight: 600
+				font-style: italic
+				font-size: 16px
+			p
+				font-weight: 300
+				font-size: 12px
+			&::after
+				content: ''
+				position: absolute
+				left: 10px
+				bottom: -65px
+				width: 55px
+				height: 62px
+				background: url('../img/dots.png') center no-repeat
+				background-size: cover
 		
 
 
@@ -239,7 +271,7 @@ h4
 				color: $accent
 				line-height: 1.4
 				margin-right: 40px
-			h5
+			h3
 				font-size: 24px
 				font-weight: 800
 				line-height: 1.0

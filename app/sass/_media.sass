@@ -10,35 +10,43 @@
 		width: 1200px
 		box-sizing: border-box
 
+	h2.type-head
+		font-size: 64px
+
 	.header
-		.main-head
-			grid-template-columns: auto 300px
-		.head-contacts
-			margin-right: 50px
+		padding: 10px 0
 
 	.top-section
 		h1
-			font-size: 28px
+			font-size: 86px
+		h3, p
+			font-size: 20px
+		.scroll-block
+			bottom: 20px
+		.main-block
+			max-width: 350px
+			.text
+				top: 40px
 
-	.type-block .type-item p
-		font-size: 16px
+	.content-section
+		.type-item
+			&:nth-child(even)
+				.text
+					margin: 0 0 0 40px
+			.text
+				p
+					br
+						display: none
+				h3
+					margin: 53px 0 20px 0
+				.num
+					font-size: 115px
+					margin-right: 24px
+		.play-video
+			width: 50%
 
 	.main-footer
-		padding: 12px 0 16px 0
-		.logo
-			justify-content: center
-		.footer-grid
-			display: grid
-			grid-template-columns: repeat(2, 1fr)
-			grid-gap: 20px
-			.footer-about
-				p
-					text-align: center
-			.polit
-				span
-					display: block
-					text-align: center
-					margin-top: 5px
+		padding: 25px 0 20px 0
 
 
 
@@ -247,7 +255,7 @@
 		box-sizing: border-box
 
 	section
-		padding: 40px 0
+		padding: 60px 0
 
 	.button
 		height: 60px
@@ -264,12 +272,16 @@
 			font-size: 16px
 
 	h2.type-head
-		font-size: 22px
+		font-size: 28px
 		margin-bottom: 30px
 		br
 			display: none
 		span
 			font-size: 22px
+
+	h4
+    font-size: 18px
+    margin: 60px 0 30px 0
 
 	.header
 		display: none
@@ -299,56 +311,75 @@
 				color: #fff
 				span
 					font-size: 12px
-		h1
-			display: none
-		h2
-			display: block
-			font-size: 24px
-			line-height: 1.2
-			margin-top: 40px
-			margin-bottom: 25px
-		.intro-items
-			grid-template-columns: auto
-			grid-gap: 10px
-			margin-bottom: 25px
-			grid-template-areas: none
-			justify-content: flex-start
-		.intro-item
-			margin-bottom: 20px
-			justify-self: start
-			&:nth-child(n)
-				grid-area: unset
-			.image
-				justify-content: center
-				img
-					flex-shrink: 0
-			p
-				margin: 3px 0 0 20px
 		.button
 			width: 100%
 
-	.type-block
-		grid-template-columns: repeat(1, 1fr)
-
-	.content-section 
-		&.single
-			padding: 50px 0 70px 0
-
-	.single-content
-		padding: 0
-		p
-			margin: 15px 0 20px 0
-			line-height: 1.6
-		img
-			margin: 30px 0
-		.img-grid
+	.info-section
+		.info-block
 			grid-template-columns: auto
+			grid-gap: 40px
+		.info-item
+			align-items: center
+			text-align: center
+
+	.content-section
+		padding: 60px 0
+		.type-item
+			flex-direction: column
+			&:nth-child(even)
+				flex-direction: column
+				.text
+					margin: 0 0 25px 0
+			.text
+				width: auto
+				margin-bottom: 25px
+				br
+					display: none
+				.num
+					font-size: 72px
+				h3
+					margin: 20px 0 20px 0
+					font-size: 20px
+				ul
+					li
+						font-size: 14px
+			.play-video
+				width: auto
+
+	.small-info-section
+		padding: 120px 0
+		p
+			font-size: 24px
+			br
+				display: none
+
+	.helpful-info-section
+		padding: 60px 0
+		.blog-links
+			flex-direction: column
+			align-items: center
+			.icon
+				justify-content: center
+			a
+				p
+					margin-top: 15px
+				&:not(:last-child)
+					margin-right: 0
+					margin-bottom: 25px
+		.publication-links
+			grid-template-columns: auto
+			margin-right: 0
+			grid-gap: 35px
+			a
+				display: flex
+				justify-content: center
+				align-items: center
 
 	.main-footer
-		padding: 10px 0
+		padding: 25px 0
 		.footer-grid
 			grid-template-columns: auto
-			grid-gap: 20px
+			grid-gap: 30px
 			flex-direction: column
 			justify-content: center
 			align-items: center
