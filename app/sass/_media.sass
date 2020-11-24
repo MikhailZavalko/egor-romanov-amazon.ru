@@ -238,15 +238,7 @@
 //Small: ≥576px
 @media (max-width: 576px)
 	.header
-		background-color: rgba(#000, .98)
-		&.shrinked
-			background-color: rgba(#000, .98)
-		.menu
-			width: 100%
-			background-color: rgba(#000, .98)
-			.menu_list
-				.menu_item
-					margin-left: 25px
+		display: none
 
 	.container
 		width: 100%
@@ -286,33 +278,38 @@
 	.header
 		display: none
 
-	.logo
-		p
-			margin: 0 0 0 12px
-			font-size: 14px
-			span
-				font-size: 12px
-
 	.top-section
 		min-height: auto
-		padding-top: 35px
+		padding-top: 50px
+		padding-bottom: 0
 		margin: 0
 		background-position: left
-		&.single
-			padding: 70px 0
-			h2
-				display: block
-				font-size: 26px
-				margin: 0
-		.logo
-			p
-				margin: 0 0 0 12px
-				font-size: 14px
-				color: #fff
-				span
-					font-size: 12px
+		flex-direction: column
+		&::before
+			display: none
+		h1
+			font-size: 40px
+			margin-top: 50px
+		h3, p
+			font-size: 16px
+		p
+			margin-bottom: 30px
 		.button
-			width: 100%
+			display: flex
+			margin-bottom: 40px
+		.logo-sm
+			display: block
+			margin: 0 auto
+		.scroll-block
+			display: none
+		.main-block
+			position: relative
+			bottom: auto
+			left: auto
+			transform: translateX(0)
+			.text
+				p
+					margin-bottom: 0
 
 	.info-section
 		.info-block
