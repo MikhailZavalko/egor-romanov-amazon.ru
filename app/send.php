@@ -19,7 +19,7 @@ $mail->Password = 'QWEasd123';
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 $mail->setFrom('sendallmailrus@yandex.ru');
-$mail->addAddress('info@internet-biznes-v-evrope.ru');
+// $mail->addAddress('info@amazing-cash.ru');
 $mail->addAddress('petrov0389@gmail.com');
 
 
